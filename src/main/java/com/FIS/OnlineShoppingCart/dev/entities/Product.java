@@ -55,36 +55,7 @@ public class Product extends BaseEntity{
     }
 
 
-    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JoinTable(name = "tbl_product_sale",
-            joinColumns = @JoinColumn(name = "product_id"),
-            inverseJoinColumns = @JoinColumn(name = "sale_id"))
-    private List<Sale> sale = new ArrayList<Sale>();
 
-
-
-    public List<Sale> getSale() {
-        return sale;
-    }
-
-    public void setSale(List<Sale> sale) {
-        this.sale = sale;
-    }
-
-
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "gift_id")
-    private Gift gift;
-
-
-
-    public Gift getGift() {
-        return gift;
-    }
-
-    public void setGift(Gift gift) {
-        this.gift = gift;
-    }
 
 
     @ManyToOne(fetch = FetchType.EAGER)

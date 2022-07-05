@@ -92,9 +92,9 @@ public class Order {
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "created_by")
-    private Customer user;
+    private Account user;
 
-    public Customer getUser() {
+    public Account getUser() {
         return user;
     }
 
@@ -106,7 +106,7 @@ public class Order {
         this.note_by_customer = note_by_customer;
     }
 
-    public void setUser(Customer user) {
+    public void setUser(Account user) {
         this.user = user;
     }
 
