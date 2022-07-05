@@ -12,6 +12,7 @@ public class ProductInCart {
     private String seo;
 
 
+
     public String getSeo() {
         return seo;
     }
