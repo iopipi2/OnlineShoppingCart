@@ -8,6 +8,7 @@ public class OnlineShoppingCartApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(OnlineShoppingCartApplication.class, args);
+		System.out.println("Hoang Den Day !");
 	}
 
 }
