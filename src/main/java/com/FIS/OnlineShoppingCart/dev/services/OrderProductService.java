@@ -23,22 +23,36 @@ public class OrderProductService {
     @Autowired
     private OrderRepo orderRepo;
 
-    @Query("SELECT a FROM Product a where a.product_name= ?1")
 
-    //List all Order Product By Order Id
-    public List<OrderProducts> listAllProduct(Integer id)
-    {
-        return orderRepo.findAllById(id);
-    }
-    //Save Order Product
-    public void saveOrderProduct(OrderProducts orderProducts)
-    {
-        orderProductRepo.save(orderProducts);
-    }
-    //Delete Order Product
-    public void deleteOrderProduct(OrderProducts orderProducts)
-    {
-        orderProductRepo.delete(orderProducts);
-    }
+
+//    //List all Order Product By Order Id
+//    public List<OrderProducts> listAllProduct(Integer id)
+//    {
+//        return orderRepo.findAllById(id);
+//    }
+//    //Save Order Product
+//    public void saveOrderProduct(OrderProducts orderProducts)
+//    {
+//        orderProductRepo.save(orderProducts);
+//    }
+//    //Delete Order Product
+//    public void deleteOrderProduct(OrderProducts orderProducts)
+//    {
+//        orderProductRepo.delete(orderProducts);
+//    }
+//
+//
+//    public List<Order> searchAdmin(final Order order) {
+//        return orderRepo.findOrderAdmin();
+//    }
+//
+//    public List<Order> searchCustomer(Integer id) {
+//        return orderRepo.findOrderCustomer(id);
+//    }
+//
+//    public List<Order> findOrderByStatus(Integer status){
+//        return orderRepo.findOrderByStatus(status);
+//    }
+
 
 }

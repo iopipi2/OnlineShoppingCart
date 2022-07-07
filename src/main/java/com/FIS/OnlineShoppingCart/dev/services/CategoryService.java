@@ -2,6 +2,7 @@ package com.FIS.OnlineShoppingCart.dev.services;
 
 import com.FIS.OnlineShoppingCart.dev.entities.Category;
 
+import com.FIS.OnlineShoppingCart.dev.model.CategorySearch;
 import com.FIS.OnlineShoppingCart.dev.repositories.CategoryRepo;
 import com.FIS.OnlineShoppingCart.dev.repositories.ProductRepo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,11 +33,21 @@ public class CategoryService {
     //Save Category
     public void saveCategory(Category category)
     {
+
         categoryRepo.save(category);
     }
     //Delete Category
     public void deleteCategory(Category category)
     {
         categoryRepo.delete(category);
+    }
+
+    public List<Category> searchAdmin(final CategorySearch categorySearch)
+    {
+        return categoryRepo.findCategory();
+    }
+    public List<Category> search(final CategorySearch categorySearch)
+    {
+        return categoryRepo.findCategory();
     }
 }
